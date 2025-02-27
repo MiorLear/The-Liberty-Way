@@ -1,0 +1,172 @@
+
+/* _____________________________________ Google Translate | Dropdown ____________________________________ */
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f9f9f9;
+} */
+
+.GoogleTranslate-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 21.875rem;
+    padding-top: -6.25rem;
+}
+
+.GoogleTranslate-dropdown{
+    position: absolute;
+    z-index: 10;
+    margin-top: 18.75rem;
+    width: 18.75rem;
+    height: 3.125rem;
+}
+
+.GoogleTranslate-dropdown::before{
+    content: '';
+    position: absolute;
+    top: 1.563rem;
+    right: 1.75rem;
+    width: 0.75rem;
+    height: 0.125rem;
+    background: #000;
+    z-index: 10;
+    transform: rotate(40deg);
+    transition: 0.25s;
+}
+
+.GoogleTranslate-dropdown.active::before{
+    right: 1.25rem;    
+}
+
+.GoogleTranslate-dropdown::after{
+    content: '';
+    position: absolute;
+    top: 1.563rem;
+    right: 1.25rem;
+    width: 0.75rem;
+    height: 0.125rem;
+    background: #000;
+    z-index: 10;
+    transform: rotate(-40deg);
+    transition: 0.5s;
+}
+
+.GoogleTranslate-dropdown.active::after{
+    right: 1.75rem;    
+}
+
+.GoogleTranslate-dropdown input {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 0.625rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 1.25rem;
+    background: #dcbb87;
+    box-shadow: 0 0.313rem 1.25rem rgba(0,0,0,0.05);
+    outline: none;
+    border: none;
+    text-align: center;
+    color: #000;
+}
+
+.GoogleTranslate-dropdown .option{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 1.875rem 1.875rem rgba(0,0,0,0.05);
+    border-radius: 0.625rem;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.25s;
+    text-align: center;
+    z-index: 10;
+}
+
+.GoogleTranslate-dropdown.active .option{
+    visibility: visible;
+    opacity: 1;
+}
+
+.GoogleTranslate-dropdown .option div{
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+
+}
+
+.GoogleTranslate-dropdown .option div:hover{
+    transition: 0.5s;
+    background: #cda36349;
+    color: #000;
+}
+/* ______________________________________________________________________________________________________ */
+
+
+
+
+/* _______________________________________ Google Translate | API _______________________________________ */
+/* .gflag {
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-image: url(//gtranslate.net/flags/16.png);
+    vertical-align: middle;
+}
+
+.gflag:hover {
+    background-image: url(//gtranslate.net/flags/16a.png);
+}
+
+a.gflag img {
+    border: 0;
+} */
+
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+.goog-te-menu-value:hover {
+    text-decoration: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+
+/* ________________ !Important ________________________ */
+
+#goog-gt-tt {
+    display: none !important;
+}
+
+body>.skiptranslate {
+    display: none;
+}
+
+#google_translate_element2 {
+    display: none;
+}
+
+/* ___________________________________________________ */
+/* ______________________________________________________________________________________________________ */
+

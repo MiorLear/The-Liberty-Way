@@ -1,0 +1,178 @@
+
+/*   Animated checkbox    */
+
+
+:root {
+    --primary: #5342ed;
+    --white: #ffffff;
+    --light: #d2dae2;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *,
+  ::before::after {
+    box-sizing: border-box;
+  }
+  
+  
+  
+  ul {
+    list-style: none;
+  }
+  
+  .site {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .options ul li {
+    position: relative;
+    width: 200px;
+    height: 70px;
+    margin-bottom: 1px;
+  
+  }
+  
+  .options ul li input {
+  
+    display: none;
+  
+  }
+  
+  
+  
+  .options ul li label {
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  
+  }
+  
+  .options ul li label::before {
+  
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-radius: 7px;
+    z-index: -1;
+    transform: scale(1);
+    transition: border .3s, trasform .3s;
+  
+  }
+  
+  @keyframes scaleborder {
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  
+  
+  .options ul li label .circle {
+  
+    width: 22px;
+    height: 22px;
+    border: 2px solid #000;
+    background: linear-gradient(145deg, #000, #000);
+    border-radius: 50%;
+    transform: scale(1);
+    transition: background .5s, border .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  }
+  
+  .options ul li input:checked+label .circle {
+  
+    border: 7px solid #dcbb87;
+    background: var(--white);
+    animation: scaledot .5s forwards cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  @keyframes scaledot {
+    50% {
+      transform: scale(1.25);
+    }
+  }
+  
+  .options ul li input:checked+label .text {
+  
+    color: black;
+  }
+  
+  .options ul li label .fireworks {
+  
+    position: absolute;
+    left: 38px;
+    transform: scale(0);
+  }
+  
+  .options ul li label .fireworks::before,
+  .options ul li label .fireworks::after {
+  
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    box-shadow: 0 -25px 0 0 #19232d,
+      25px 0 0 0 #dcbb87,
+      0 25px 0 0 #19232d,
+      -25px 0 0 0 #dcbb87,
+      12px -13px 0 0 #19232d,
+      25px 25px 0 0 #dcbb87,
+      -13px 12px 0 0 #19232d,
+      -25px -25px 0 0 #dcbb87;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  .options ul li label .fireworks::after {
+    width: 2px;
+    height: 2px;
+    transform: rotate(112deg);
+  }
+  
+  .options ul li input:checked+label .fireworks {
+    animation: spread 2s forwards;
+    will-change: box-shadow;
+  }
+  
+  @keyframes spread {
+  
+    0%,
+    10% {
+      transform: scale(0);
+    }
+  
+    25% {
+      transform: scale(1.2) rotate(40deg);
+    }
+  
+    50% {
+      transform: scale(1.2) rotate(40deg) skew(-25deg);
+    }
+  }
+  
+  .options ul li input:checked+label .fireworks::before,
+  .options ul li input:checked+label .fireworks::after {
+    width: 0;
+    height: 0;
+    transition: width .3s .4s, height .3s .4s;
+  }

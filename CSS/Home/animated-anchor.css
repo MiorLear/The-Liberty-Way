@@ -1,0 +1,66 @@
+.btn--base {
+    position: relative;
+    color: #000;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.btn--base:hover {
+    color: #dcbb87;
+    text-decoration: underline;
+}
+
+.fa-arrow-right-long {
+    color: #000;
+    padding: 0 0 0 10px;
+    transition: 1s;
+    transform: translate(0%, 0%);
+}
+
+.btn--base:hover .fa-arrow-right-long {
+    color: #dcbb87;
+    padding: 0 0 0 5px;
+    transform: translate(50%, 0%);
+}
+
+@media only screen and (max-width: 991px) {
+    .btn--base {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+}
+
+
+/* <a> | Responsive */
+.btn--base-responsive {
+    position: relative;
+    color: #000;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.btn--base-responsive:hover {
+    color: #dcbb87;
+    text-decoration: underline;
+}
+
+.btn--base-responsive:hover .fa-arrow-right-long {
+    color: #dcbb87;
+    padding: 0 0 0 5px;
+    transform: translate(50%, 0%);
+}
+
+@media only screen and (max-width: 991px) {
+    .btn--base-responsive {
+        font-size: 12px;
+        padding: 0 60px 0 0;
+    }
+}
